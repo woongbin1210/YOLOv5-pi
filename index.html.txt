@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실시간 금연구역 흡연감지 관리자 서버</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+	}
+        header img {
+            height: 50px; /* 로고의 크기를 조정합니다 */
+            margin-right: 10px; /* 제목과 로고 사이의 간격을 조정합니다 */
+        }
+        main {
+            width: 90%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+               <h1>금연구역 흡연감지시스템 실시간 화면</h1>
+    </header>
+    <main>
+        <img src="{{ url_for('video_feed') }}" alt="Video Stream">
+    </main>
+</body>
+</html>
+
